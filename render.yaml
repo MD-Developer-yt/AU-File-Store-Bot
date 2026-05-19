@@ -1,0 +1,14 @@
+services :
+   - type : web
+     name : AU-File-Store-Bot
+     runtime : go
+     repo : https://github.com/MD-Developer-yt/AU-File-Store-Bot
+     buildCommand: go build .
+     startCommand: ./AU-File-Store-Bot
+     envVars :
+       - key : BOT_TOKEN
+         value : your-bots-token
+       - key : DEFAULT_SEARCH_METHOD
+         value: jw
+       - key : PORT
+         value : 10000
