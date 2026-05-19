@@ -1,0 +1,63 @@
+{
+    "name": "AU-File-Store-Bot",
+    "description": "Telegram Bot to Create Permanent Shareable Links to a Batch of Messages",
+    "keywords": [
+        "Go",
+        "fileshare",
+        "filestore",
+        "messagestore",
+        "Telegram"
+    ],
+    "website": "https://github.com/MD-Developer-yt",
+    "repository": "https://github.com/MD-Developer-yt/AU-File-Store-Bot",
+    "success_url": "https://telegram.dog/Mr_Mohammed_29",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your Bot Token From @BotFather",
+            "value": ""
+        },
+        "ADMINS": {
+           "description": "List of telegram IDs of users allowed to create links with the bot, seperated by spaces.",
+           "value": ""
+        },
+        "PROTECT_CONTENT": {
+            "description": "Set this to true to prevent users from forwarding/copying content from the bot",
+            "value": ""
+        },
+        "ALLOW_PUBLIC": {
+           "description": "Set this to true to allow anyone to create batch links.",
+           "value": ""
+        },
+        "AUTO_DELETE": {
+            "description": "Number of minutes after which messages should be automatically deleted.",
+            "value": ""
+        },
+        "DISABLE_NOTIFICATION": {
+            "description": "Set this to true to send messages without a notification.",
+            "value": ""
+        },
+        "BATCH_SIZE_LIMIT": {
+            "description": "Maximum number of messages allowed in a batch.",
+            "value": ""
+        },
+        "FSUB": {
+            "description": "List of IDs of channels the user must join to get content, seperated by spaces.",
+            "value": ""
+        },
+        "DB_CHANNEL": {
+            "description": "Database channel only used for backward compatibilty with codex links.",
+            "value": ""
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "https://github.com/heroku/heroku-buildpack-go.git"
+        }
+    ],
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "eco"
+        }
+    }
+}
